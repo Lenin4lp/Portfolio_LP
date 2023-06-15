@@ -36,7 +36,8 @@ function Home() {
   };
 
   const [elementRef, isIntersecting] = useIntersection({
-    threshold: window.innerHeight < 450 ? 0.2 : 0.6,
+    threshold:
+      window.innerHeight < 450 ? 0.2 : window.innerWidth < 768 ? 0.4 : 0.6,
   });
 
   return (
@@ -64,16 +65,17 @@ function Home() {
                 <SocialNetworks sNetworks={Networks.linkedin} />
                 <SocialNetworks sNetworks={Networks.mail} />
               </div>
-              <a
-                className="a-button"
-                href="/LeninPatino-CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button type="button" className="d-flex buttons text-fluid">
+
+              <button type="button" className="d-flex buttons text-fluid">
+                <a
+                  className="a-button"
+                  href="/LeninPatino-CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Download my CV
-                </button>
-              </a>
+                </a>
+              </button>
             </div>
           </div>
           <div

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import "../styleSheets/Form.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import emailjs, { sendForm } from "emailjs-com";
+import emailjs from "emailjs-com";
 import Modal from "./Modal";
 import Astronaut from "../images/astronaut.png";
 import SadCloud from "../images/sad-cloud.svg";
@@ -11,7 +11,7 @@ import DismissSVG from "../images/dismiss.svg";
 const Form = () => {
   const [modalState, setModalState] = useState("d-none");
   const [modalContent, setModalContent] = useState();
-
+  /* eslint-disable */
   // * Functions that allow to show and hide modal by using submit button
   const ShowModal = () => {
     setModalState("d-flex");
@@ -111,7 +111,6 @@ const Form = () => {
     register,
     handleSubmit,
     formState: { errors, isDirty },
-    setValue,
   } = useForm();
 
   /* Submit function: emailjs it's a library that allows to send forms directly to determinated emails. 

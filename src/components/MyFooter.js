@@ -7,19 +7,19 @@ import useIntersection from "./useIntersection";
 const MyFooter = () => {
   const Networks = {
     github: {
-      snlink: "#",
+      snlink: "https://github.com/Lenin4lp",
       sn: "github",
     },
     linkedin: {
-      snlink: "#",
+      snlink: "https://www.linkedin.com/in/lenin-pati%C3%B1o-135453224",
       sn: "linkedin",
     },
     instagram: {
-      snlink: "#",
+      snlink: "https://instagram.com/four_lp?igshid=MzNlNGNkZWQ4Mg==",
       sn: "instagram",
     },
     mail: {
-      snlink: "#",
+      snlink: "mailto:leninesteban98@outlook.com",
       sn: "mail",
     },
   };
@@ -31,7 +31,7 @@ const MyFooter = () => {
       <div className="footer">
         <div
           className={`container-fluid animate__animated ${
-            isIntersecting ? "animate__slideInLeft" : "animate__slideOutRight"
+            isIntersecting ? "animate__slideInLeft" : "animate__slideOutRigh"
           }`}
         >
           <div className="row d-flex justify-content-center align-items-center">

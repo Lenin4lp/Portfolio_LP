@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styleSheets/MyProjects.css";
 import Modal from "./Modal";
 import useIntersection from "./useIntersection";

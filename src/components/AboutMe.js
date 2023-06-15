@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense, useEffect } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import useIntersection from "./useIntersection";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styleSheets/AboutMe.css";
@@ -14,7 +14,6 @@ function AboutMe() {
   const MySkills = lazy(() => import("./MySkills"));
 
   //* Asynchronous function that allows animations on info cards
-  const $navButtons = document.getElementById("nButton");
 
   function handleChange(num) {
     setAnimation(true);

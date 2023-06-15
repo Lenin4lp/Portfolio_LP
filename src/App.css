@@ -5,11 +5,12 @@
 
 html,
 body {
-  background: #3d2050;
+  background: black;
 }
 
 .App {
   overflow-x: clip;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .principal-container {

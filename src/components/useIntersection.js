@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // * Custom hook that will help to animate every single selected element that enters on viewport
 
