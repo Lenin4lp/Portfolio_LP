@@ -1,0 +1,41 @@
+.navbar {
+  background-color: #3d20509f;
+}
+
+.navigation-container {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.menu-options {
+  color: white !important;
+}
+
+.logo {
+  min-width: 50px !important;
+  max-width: 280px !important;
+}
+
+.navbar-toggler {
+  border: none;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .logo {
+    padding-left: 150px;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo {
+    max-width: 140px !important;
+  }
+}

@@ -1,0 +1,21 @@
+.modal-container {
+  background-color: #3d2050de;
+  color: white;
+  padding: 20px;
+  border: 1px rgba(255, 255, 255, 0.445) !important;
+  box-shadow: 0px 0px 5px white;
+  transition: 1s;
+  animation-name: appearing;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+}
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

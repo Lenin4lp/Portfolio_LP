@@ -1,0 +1,37 @@
+.tec-img {
+  display: block;
+  height: 120px;
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.skill-container {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 15px 0px 15px;
+}
+
+.tec-text {
+  font-size: 23px;
+}
+
+.tec-text-container {
+  margin-top: 5px;
+}
+
+/** Media Query */
+
+@media (max-width: 838px) {
+  .tec-img {
+    height: 90px;
+  }
+  .skill-container {
+    margin: 40px 10px 0px 10px;
+  }
+  .tec-text {
+    font-size: 17px;
+  }
+}

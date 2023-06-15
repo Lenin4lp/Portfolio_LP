@@ -1,0 +1,15 @@
+.my-photo {
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 100px;
+  box-shadow: 0px 0px 2px #feffff, 0px 0px 6px #ffffff, 0px 0px 12px #ffffff;
+}
+
+.who-am-i {
+  backdrop-filter: null !important;
+}
+
+.description {
+  text-align: justify;
+  margin: 60px 0px 0px 0px;
+}

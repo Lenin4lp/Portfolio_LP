@@ -1,0 +1,25 @@
+.sn-logo {
+  margin: 7px;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.sn-logo img {
+  &:hover {
+    transform: scale(1.1);
+    background-color: #55d89c;
+    box-shadow: 0 0 10px #55d89c, 0 0 20px #55d89c, 0 0 30px #55d89c;
+    transition-delay: 0.1s;
+    border-radius: 8px;
+  }
+  &:active {
+    transform: scale(1.2);
+    transition-delay: 0s;
+  }
+}
+
+.footer-sn .sn-logo {
+  display: inline;
+  justify-content: center !important;
+  align-items: center;
+}

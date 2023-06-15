@@ -1,0 +1,18 @@
+.proyects-container {
+  margin-top: 35px;
+  background-color: #3d20509f;
+  color: white;
+}
+
+.proyects-title {
+  padding: 40px 40px 40px 40px;
+}
+
+.proyects-container .default-section {
+  min-height: 440px;
+}
+
+.wip-img {
+  max-height: 100px;
+  margin: 30px 20px 20px 20px;
+}
