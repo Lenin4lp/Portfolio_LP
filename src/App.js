@@ -9,10 +9,6 @@ import "animate.css";
 
 // *Principal Aplication
 
-// TODO Add CEO to the web
-// TODO Change favicon
-// TODO Code Minification it's needed
-
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);

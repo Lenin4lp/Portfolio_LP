@@ -3,7 +3,6 @@ import "../styleSheets/SocialNetworks.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // *This function shows social networks logos and their respective url
-// TODO Url's aren't available
 
 function SocialNetworks({ sNetworks }) {
   return (
