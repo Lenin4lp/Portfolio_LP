@@ -9,30 +9,31 @@ import "animate.css";
 
 //* Home Component
 
+const Networks = {
+  github: {
+    snlink: "https://github.com/Lenin4lp",
+    sn: "github",
+  },
+  linkedin: {
+    snlink: "https://www.linkedin.com/in/lenin-pati%C3%B1o-135453224",
+    sn: "linkedin",
+  },
+  instagram: {
+    snlink: "https://instagram.com/four_lp?igshid=MzNlNGNkZWQ4Mg==",
+    sn: "instagram",
+  },
+  mail: {
+    snlink: "mailto:leninesteban98@outlook.com",
+    sn: "mail",
+  },
+};
+
 function Home() {
   const [lightSwitch, getlightSwitch] = useState(true);
+  console.log("se renderizo el mijin");
 
   const handleSwitch = () => {
     getlightSwitch(!lightSwitch);
-  };
-
-  const Networks = {
-    github: {
-      snlink: "https://github.com/Lenin4lp",
-      sn: "github",
-    },
-    linkedin: {
-      snlink: "https://www.linkedin.com/in/lenin-pati%C3%B1o-135453224",
-      sn: "linkedin",
-    },
-    instagram: {
-      snlink: "https://instagram.com/four_lp?igshid=MzNlNGNkZWQ4Mg==",
-      sn: "instagram",
-    },
-    mail: {
-      snlink: "mailto:leninesteban98@outlook.com",
-      sn: "mail",
-    },
   };
 
   const [elementRef, isIntersecting] = useIntersection({
@@ -115,4 +116,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default React.memo(Home);

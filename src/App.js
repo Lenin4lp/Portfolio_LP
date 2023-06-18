@@ -9,24 +9,21 @@ import "animate.css";
 
 // *Principal Aplication
 
+const AboutMe = lazy(() => import("./components/AboutMe.js"));
+const MyProjects = lazy(() => import("./components/MyProjects"));
+
 function App() {
   const [isLoading, setIsLoading] = useState(false);
-  const [loaded, setLoaded] = useState(false);
-  const AboutMe = lazy(() => import("./components/AboutMe.js"));
-  const MyProjects = lazy(() => import("./components/MyProjects"));
 
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(true);
     }, 800);
-    setTimeout(() => {
-      setLoaded(true);
-    }, 1000);
   }, []);
 
   return (
     <div>
-      {loaded === false ? <Preloader /> : null}
+      {/* <Preloader id="preloader"></Preloader> */}
       <div
         className="App"
         data-bs-spy="scroll"

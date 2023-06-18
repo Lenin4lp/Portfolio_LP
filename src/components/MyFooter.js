@@ -4,25 +4,26 @@ import "../styleSheets/MyFooter.css";
 import SocialNetworks from "./SocialNetworks";
 import useIntersection from "./useIntersection";
 
+const Networks = {
+  github: {
+    snlink: "https://github.com/Lenin4lp",
+    sn: "github",
+  },
+  linkedin: {
+    snlink: "https://www.linkedin.com/in/lenin-pati%C3%B1o-135453224",
+    sn: "linkedin",
+  },
+  instagram: {
+    snlink: "https://instagram.com/four_lp?igshid=MzNlNGNkZWQ4Mg==",
+    sn: "instagram",
+  },
+  mail: {
+    snlink: "mailto:leninesteban98@outlook.com",
+    sn: "mail",
+  },
+};
+
 const MyFooter = () => {
-  const Networks = {
-    github: {
-      snlink: "https://github.com/Lenin4lp",
-      sn: "github",
-    },
-    linkedin: {
-      snlink: "https://www.linkedin.com/in/lenin-pati%C3%B1o-135453224",
-      sn: "linkedin",
-    },
-    instagram: {
-      snlink: "https://instagram.com/four_lp?igshid=MzNlNGNkZWQ4Mg==",
-      sn: "instagram",
-    },
-    mail: {
-      snlink: "mailto:leninesteban98@outlook.com",
-      sn: "mail",
-    },
-  };
   const [elementRef, isIntersecting] = useIntersection({
     threshold: window.innerHeight < 450 ? 0.2 : 0.4,
   });

@@ -1,25 +1,26 @@
 import React from "react";
 import Skills from "./SkillsList.js";
 
+const Technologies = {
+  javaScript: {
+    techImage: "JS",
+    techName: "JavaScript",
+  },
+  htmlTec: {
+    techImage: "html5",
+    techName: "Html",
+  },
+  cssTec: {
+    techImage: "css3",
+    techName: "Css",
+  },
+  reactTec: {
+    techImage: "react",
+    techName: "React Js",
+  },
+};
+
 function MySkills() {
-  const Technologies = {
-    javaScript: {
-      techImage: "JS",
-      techName: "JavaScript",
-    },
-    htmlTec: {
-      techImage: "html5",
-      techName: "Html",
-    },
-    cssTec: {
-      techImage: "css3",
-      techName: "Css",
-    },
-    reactTec: {
-      techImage: "react",
-      techName: "React Js",
-    },
-  };
   return (
     <div className="container-fluid d-block justify-content-center text-center align-content-center">
       <div className="row ">

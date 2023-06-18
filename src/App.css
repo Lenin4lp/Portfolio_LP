@@ -14,7 +14,7 @@ body {
 }
 
 .principal-container {
-  background: #3d2050;
+  background: black;
   background-image: url("./images/space3.webp");
   background-size: cover;
   background-repeat: repeat;
@@ -33,6 +33,10 @@ body {
   overflow: hidden !important;
 }
 
+.loader-hidden {
+  transition: 2s;
+  opacity: 0 !important;
+}
 .whole-modal {
   background-color: rgba(0, 0, 0, 0.37);
   position: fixed;

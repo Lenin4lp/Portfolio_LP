@@ -8,6 +8,7 @@
   display: grid;
   place-items: center;
   z-index: 9999;
+  overflow: hidden;
 }
 
 @keyframes ldio-2f80aq37i8n {

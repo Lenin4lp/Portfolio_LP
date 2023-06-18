@@ -4,33 +4,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styleSheets/AboutMe.css";
 import "animate.css";
 
+const Form = lazy(() => import("./Form"));
+const WhoAmI = lazy(() => import("./WhoAmI"));
+const MySkills = lazy(() => import("./MySkills"));
+
 function AboutMe() {
   const [content, setContent] = useState(1);
   const [animation, setAnimation] = useState(false);
   const [buttonState, setButtonState] = useState(false);
-  // LazyLoad imports
-  const Form = lazy(() => import("./Form"));
-  const WhoAmI = lazy(() => import("./WhoAmI"));
-  const MySkills = lazy(() => import("./MySkills"));
-
-  //* Asynchronous function that allows animations on info cards
-
-  function handleChange(num) {
-    setAnimation(true);
-    setButtonState(true);
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(setContent(num));
-      }, 1350);
-    });
-  }
-
-  async function getClick(num) {
-    await handleChange(num);
-    setAnimation(false);
-    setButtonState(false);
-  }
-
   // * Funtion in charge of alternate between components everytime the buttons are clicked
   function ChangeComponent() {
     if (content === 1) {
@@ -70,6 +51,25 @@ function AboutMe() {
         </Suspense>
       );
     }
+  }
+  // LazyLoad imports
+
+  //* Asynchronous function that allows animations on info cards
+
+  function handleChange(num) {
+    setAnimation(true);
+    setButtonState(true);
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(setContent(num));
+      }, 1350);
+    });
+  }
+
+  async function getClick(num) {
+    await handleChange(num);
+    setAnimation(false);
+    setButtonState(false);
   }
 
   const [elementRef, isIntersecting] = useIntersection({
