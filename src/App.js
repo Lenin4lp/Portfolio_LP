@@ -4,12 +4,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavigationBar from "./components/NavigationBar.js";
 import Home from "./components/Home.js";
 import MyFooter from "./components/MyFooter";
-import Preloader from "./components/Preloader";
 import "animate.css";
-
+import AboutMe from "./components/AboutMe.js";
 // *Principal Aplication
 
-const AboutMe = lazy(() => import("./components/AboutMe.js"));
 const MyProjects = lazy(() => import("./components/MyProjects"));
 
 function App() {
@@ -22,16 +20,13 @@ function App() {
   }, []);
 
   return (
-    <div>
-      {/* <Preloader id="preloader"></Preloader> */}
-      <div
-        className="App"
-        data-bs-spy="scroll"
-        data-bs-target="#navId"
-        id="home"
-      >
+    <div data-bs-spy="scroll" data-bs-target="#navId">
+      <div className="App" id="home">
+        <div className="background-container"></div>
         <div className="principal-container">
-          <NavigationBar />
+          <div className="sticky-top">
+            <NavigationBar />
+          </div>
           <div className="content">
             {/* HOME */}
             <div style={isLoading ? { opacity: 1 } : {}} className="sweet-home">
@@ -47,11 +42,7 @@ function App() {
             {/* MY PROJECTS */}
             <div id="my-project"></div>
             <Suspense fallback={<h1 className="loading">Loading...</h1>}>
-              <div
-                style={{
-                  backdropFilter: "blur(0px)",
-                }}
-              >
+              <div id="proyectContainer">
                 <MyProjects />
               </div>
             </Suspense>

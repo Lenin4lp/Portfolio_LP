@@ -100,6 +100,7 @@
 }
 
 .brainlight {
+  width: 400px;
   max-width: 400px;
   opacity: 7%;
 }
@@ -134,7 +135,7 @@
 
 .default-section {
   color: white;
-  padding: 0px 20px 40px 20px;
+  padding: 40px 20px 60px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,6 +147,13 @@
 @media (max-width: 768px) {
   .brainlight {
     max-width: 260px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .default-section {
+    color: white;
+    padding: 20px 20px 20px 20px;
   }
 }
 

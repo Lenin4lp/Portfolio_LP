@@ -21,7 +21,7 @@ function useIntersection(options = {}) {
         observer.unobserve(element);
       }
     };
-  }, [options]);
+  }, [options, elementRef]);
   return [elementRef, isIntersecting];
 }
 

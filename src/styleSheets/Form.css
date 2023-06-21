@@ -102,7 +102,7 @@
   margin-bottom: 10px;
 }
 
-.loader {
+.modal-loader {
   display: block;
   --height-of-loader: 4px;
   --loader-color: #55d89c;
@@ -113,7 +113,7 @@
   position: relative;
 }
 
-.loader::before {
+.modal-loader::before {
   content: "";
   position: absolute;
   background: var(--loader-color);

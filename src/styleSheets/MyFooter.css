@@ -5,6 +5,7 @@
 }
 
 .cod-img {
+  height: 120px;
   max-height: 120px !important;
   opacity: 70%;
 }

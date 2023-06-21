@@ -1,10 +1,7 @@
 .navbar {
   background-color: #3d20509f;
-}
 
-.navigation-container {
-  position: sticky;
-  top: 0;
+  overflow: hidden;
   z-index: 100;
 }
 

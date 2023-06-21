@@ -30,7 +30,7 @@ const Form = () => {
           <p className="text-fluid">Submitting...</p>
         </div>
         <div className="col-12 loader-column d-flex justify-content-center align-items-center">
-          <div className="loader"></div>
+          <div className="modal-loader"></div>
         </div>
         <div className="col-12 d-flex justify-content-center">
           <p className="text-fluid">
