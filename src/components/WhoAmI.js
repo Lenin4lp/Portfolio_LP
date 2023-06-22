@@ -1,6 +1,5 @@
 import React from "react";
 import ProfilePhoto from "../images/perfil.webp";
-import "../styleSheets/WhoAmI.css";
 
 function WhoAmI() {
   return (
@@ -46,4 +45,4 @@ function WhoAmI() {
   );
 }
 
-export default WhoAmI;
+export default React.memo(WhoAmI);

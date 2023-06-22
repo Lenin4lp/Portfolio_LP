@@ -51,4 +51,4 @@ function MySkills() {
   );
 }
 
-export default MySkills;
+export default React.memo(MySkills);

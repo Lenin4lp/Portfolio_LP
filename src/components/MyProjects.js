@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import "../styleSheets/MyProjects.css";
 import Modal from "./Modal";
 import useIntersection from "./useIntersection";
@@ -8,6 +8,16 @@ function MyProjects() {
   const [elementRef, isIntersecting] = useIntersection({
     threshold: window.innerHeight < 450 ? 0.2 : 0.6,
   });
+  const AnimationExecute = useCallback(
+    (animateInit, animateEnd) => {
+      if (isIntersecting) {
+        return animateInit;
+      } else {
+        return animateEnd;
+      }
+    },
+    [isIntersecting]
+  );
   return (
     <div ref={elementRef} className="proyects-container container-fluid">
       <div className="row d-flex  proyects-title">
@@ -20,9 +30,10 @@ function MyProjects() {
       >
         <div
           id="modal"
-          className={`whole-modal justify-content-center animate__animated ${
-            isIntersecting ? "animate__fadeIn" : "animate__fadeOut"
-          }`}
+          className={`whole-modal justify-content-center animate__animated ${AnimationExecute(
+            "animate__fadeIn",
+            "animate__fadeOut"
+          )}`}
         >
           <Modal id="modal-tag">
             <div className=" container-fluid d-block justify-content-center align-items-center">

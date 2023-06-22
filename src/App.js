@@ -1,14 +1,13 @@
-import React, { useState, useEffect, lazy, Suspense } from "react";
+import React, { useState, useEffect, lazy, Suspense, useCallback } from "react";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import NavigationBar from "./components/NavigationBar.js";
 import Home from "./components/Home.js";
 import MyFooter from "./components/MyFooter";
 import "animate.css";
-import AboutMe from "./components/AboutMe.js";
 // *Principal Aplication
 
 const MyProjects = lazy(() => import("./components/MyProjects"));
+const AboutMe = lazy(() => import("./components/AboutMe.js"));
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);

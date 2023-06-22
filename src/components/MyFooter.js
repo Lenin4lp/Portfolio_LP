@@ -2,7 +2,6 @@ import React from "react";
 import CodImg from "../images/codeluxe-light.webp";
 import "../styleSheets/MyFooter.css";
 import SocialNetworks from "./SocialNetworks";
-import useIntersection from "./useIntersection";
 
 const Networks = {
   github: {
@@ -24,17 +23,10 @@ const Networks = {
 };
 
 const MyFooter = () => {
-  const [elementRef, isIntersecting] = useIntersection({
-    threshold: window.innerHeight < 450 ? 0.2 : 0.4,
-  });
   return (
-    <div ref={elementRef}>
+    <div>
       <div className="footer">
-        <div
-          className={`container-fluid animate__animated ${
-            isIntersecting ? "animate__slideInLeft" : "animate__slideOutRigh"
-          }`}
-        >
+        <div className={`container-fluid `}>
           <div className="row d-flex justify-content-center align-items-center">
             <div className="col-12 col-md-4 d-flex justify-content-center align-items-center py-3">
               <p className="text-fluid text-center">

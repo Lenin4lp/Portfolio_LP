@@ -1,8 +1,8 @@
 import React, { useState, lazy, Suspense } from "react";
 import useIntersection from "./useIntersection";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../styleSheets/AboutMe.css";
 import "animate.css";
+import { useCallback } from "react";
 
 const Form = lazy(() => import("./Form"));
 const WhoAmI = lazy(() => import("./WhoAmI"));
@@ -13,7 +13,7 @@ function AboutMe() {
   const [animation, setAnimation] = useState(false);
   const [buttonState, setButtonState] = useState(false);
   // * Funtion in charge of alternate between components everytime the buttons are clicked
-  function ChangeComponent() {
+  const ChangeComponent = useCallback(() => {
     if (content === 1) {
       return (
         <Suspense
@@ -51,7 +51,7 @@ function AboutMe() {
         </Suspense>
       );
     }
-  }
+  }, [content]);
   // LazyLoad imports
 
   //* Asynchronous function that allows animations on info cards

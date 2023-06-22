@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import lightOn from "../images/lighton.webp";
 import PowerIcon from "../images/power.svg";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../styleSheets/Home.css";
 import SocialNetworks from "./SocialNetworks";
 import useIntersection from "./useIntersection";
@@ -41,6 +40,17 @@ function Home() {
       window.innerHeight < 450 ? 0.2 : window.innerWidth < 768 ? 0.4 : 0.6,
   });
 
+  const AnimationExecute = useCallback(
+    (animateInit, animateEnd) => {
+      if (isIntersecting) {
+        return animateInit;
+      } else {
+        return animateEnd;
+      }
+    },
+    [isIntersecting]
+  );
+
   return (
     <section
       ref={elementRef}
@@ -51,9 +61,10 @@ function Home() {
         <div className="row justify-content-center Name align-items-center">
           <div
             id="salute"
-            className={`salute animate__animated ${
-              isIntersecting ? "animate__zoomIn" : "animate__zoomOut"
-            } col-10 col-md-5 col-lg-7 `}
+            className={`salute animate__animated ${AnimationExecute(
+              "animate__zoomIn",
+              "animate__zoomOut"
+            )} col-10 col-md-5 col-lg-7 `}
           >
             <div className="salute-text">
               <h2>Hi Stranger!</h2>
@@ -81,11 +92,10 @@ function Home() {
           </div>
           <div
             id="brain-light"
-            className={`animate__animated ${
-              isIntersecting
-                ? "animate__fadeInRight animate__delay-1s"
-                : "animate__fadeOutRight"
-            } col-10 col-md-5 col-lg-3 salute`}
+            className={`animate__animated ${AnimationExecute(
+              "animate__fadeInRight animate__delay-1s",
+              "animate__fadeOutRight"
+            )} col-10 col-md-5 col-lg-3 salute`}
           >
             <div className="brainlight-container d-flex">
               <img

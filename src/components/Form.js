@@ -1,16 +1,36 @@
-import React, { useState } from "react";
+import React, { lazy, useState, Suspense } from "react";
 import { useForm } from "react-hook-form";
 import "../styleSheets/Form.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import emailjs from "emailjs-com";
-import Modal from "./Modal";
 import Astronaut from "../images/astronaut.png";
 import SadCloud from "../images/sad-cloud.svg";
 import DismissSVG from "../images/dismiss.svg";
 
+const LoadingModal = (
+  <div>
+    <div className="row d-flex">
+      <div className="col-12 d-flex justify-content-end dismiss-column"></div>
+    </div>
+    <div className="row d-block">
+      <div className="col-12 d-flex justify-content-center">
+        <p className="text-fluid">Submitting...</p>
+      </div>
+      <div className="col-12 loader-column d-flex justify-content-center align-items-center">
+        <div className="modal-loader"></div>
+      </div>
+      <div className="col-12 d-flex justify-content-center">
+        <p className="text-fluid">
+          This process can take a few seconds. Please wait.
+        </p>
+      </div>
+    </div>
+  </div>
+);
+
 const Form = () => {
   const [modalState, setModalState] = useState("d-none");
   const [modalContent, setModalContent] = useState();
+  const Modal = lazy(() => import("./Modal"));
   /* eslint-disable */
   // * Functions that allow to show and hide modal by using submit button
   const ShowModal = () => {
@@ -20,26 +40,6 @@ const Form = () => {
     setModalState("d-none");
   };
   // * Constants that contain the different content of the modal
-  const LoadingModal = (
-    <div>
-      <div className="row d-flex">
-        <div className="col-12 d-flex justify-content-end dismiss-column"></div>
-      </div>
-      <div className="row d-block">
-        <div className="col-12 d-flex justify-content-center">
-          <p className="text-fluid">Submitting...</p>
-        </div>
-        <div className="col-12 loader-column d-flex justify-content-center align-items-center">
-          <div className="modal-loader"></div>
-        </div>
-        <div className="col-12 d-flex justify-content-center">
-          <p className="text-fluid">
-            This process can take a few seconds. Please wait.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
 
   const DoneModal = (
     <div>
@@ -63,7 +63,6 @@ const Form = () => {
         <div className="col-12 d-flex justify-content-center">
           <p className="text-fluid">Done!</p>
         </div>
-
         <div className="col-12 d-flex justify-content-center">
           <p className="text-fluid text-center">
             Thank you for filling out the contact form. <br /> We appreciate
@@ -156,7 +155,9 @@ const Form = () => {
           id="modal"
           className={`${modalState} whole-modal justify-content-center`}
         >
-          <Modal id="modal-tag">{modalContent}</Modal>
+          <Suspense fallback={<></>}>
+            <Modal id="modal-tag">{modalContent}</Modal>
+          </Suspense>
         </div>
         <form action="" onSubmit={handleSubmit(onSubmit)}>
           <div className="row">
@@ -266,4 +267,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default React.memo(Form);

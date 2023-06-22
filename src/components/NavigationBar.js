@@ -7,17 +7,13 @@ function NavigationBar() {
   return (
     <nav className="navbar container-fluid navbar-expand-lg navbar-dark ">
       <div className="container-fluid">
-        <a
-          className="navbar-brand col-5 col-md-8"
-          href="#home"
-          rel="noopener noreferrer"
-        >
+        <div className="navbar-brand col-5 col-md-8">
           <img
             className="logo img-fluid"
             src={CodeluxeLogo}
             alt="My logo is supposed to be here..."
           />
-        </a>
+        </div>
         <button
           className="navbar-toggler"
           type="button"

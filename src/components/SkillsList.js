@@ -1,6 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styleSheets/Skills.css";
 
 function SkillsList({ SkillList }) {
   return (
@@ -23,4 +21,4 @@ function SkillsList({ SkillList }) {
   );
 }
 
-export default SkillsList;
+export default React.memo(SkillsList);

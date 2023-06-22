@@ -1,6 +1,5 @@
 import React from "react";
 import "../styleSheets/SocialNetworks.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 // *This function shows social networks logos and their respective url
 
