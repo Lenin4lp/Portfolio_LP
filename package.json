@@ -11,6 +11,7 @@
     "emailjs-com": "^3.2.0",
     "framer-motion": "^10.12.16",
     "lodash": "^4.17.21",
+    "npm-check": "^6.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
@@ -22,7 +23,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "purgecss": "node ./src/scripts/purgecss.js",
+    "obfuscate": "node ./src/scripts/obfuscate.js",
+    "postbuild": "npm run purgecss && npm run obfuscate"
   },
   "eslintConfig": {
     "extends": [
@@ -47,7 +51,11 @@
     "babel-loader": "^9.1.2",
     "babel-plugin-lodash": "^3.3.4",
     "babel-preset-env": "^1.7.0",
+    "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
     "lodash-webpack-plugin": "^0.11.6",
+    "path": "^0.12.7",
+    "purgecss": "^5.0.0",
     "webpack": "^5.88.0"
   }
 }

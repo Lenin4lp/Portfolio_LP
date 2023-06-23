@@ -1,5 +1,5 @@
 import React from "react";
-import CodImg from "../images/codeluxe-light.webp";
+import CodImg from "../images/codeluxe-light1.webp";
 import "../styleSheets/MyFooter.css";
 import SocialNetworks from "./SocialNetworks";
 

@@ -29,7 +29,6 @@ const Networks = {
 
 function Home() {
   const [lightSwitch, getlightSwitch] = useState(true);
-  console.log("se renderizo el mijin");
 
   const handleSwitch = () => {
     getlightSwitch(!lightSwitch);
