@@ -9,6 +9,8 @@
 }
 
 .logo {
+  width: 280px;
+  height: auto;
   min-width: 50px !important;
   max-width: 280px !important;
 }

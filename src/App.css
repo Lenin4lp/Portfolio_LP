@@ -3,9 +3,21 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "Josefin_Sans";
+  src: url(/fonts/JosefinSans2-VariableFont_wght.ttf);
+  font-family: "Josefin_Sans2";
+  src: url(/fonts/JosefinSans-VariableFont_wght.ttf);
+}
+
 .App {
   overflow-x: clip;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin_Sans", sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: "Josefin_Sans2", sans-serif !important;
 }
 
 .principal-container {

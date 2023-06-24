@@ -5,6 +5,8 @@
 }
 
 .sn-logo img {
+  width: 30px;
+  height: 30px;
   &:hover {
     transform: scale(1.1);
     background-color: #55d89c;
@@ -22,4 +24,11 @@
   display: inline;
   justify-content: center !important;
   align-items: center;
+}
+
+@media (max-width: 400px) {
+  .sn-logo img {
+    width: 25px;
+    height: 25px;
+  }
 }

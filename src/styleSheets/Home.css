@@ -101,6 +101,7 @@
 
 .brainlight {
   width: 400px;
+  height: auto;
   max-width: 400px;
   opacity: 7%;
 }
@@ -121,10 +122,6 @@
 
 .brainlight-on {
   opacity: 80%;
-}
-
-.pi {
-  color: white;
 }
 
 .snetworks-container {
