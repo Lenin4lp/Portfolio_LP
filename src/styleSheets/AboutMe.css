@@ -65,6 +65,7 @@
 .tec-img {
   display: block;
   height: 120px;
+  width: 120px;
   transition: 0.5s;
   &:hover {
     transform: scale(1.1);

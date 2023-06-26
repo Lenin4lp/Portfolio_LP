@@ -8,6 +8,7 @@
   src: url(/fonts/JosefinSans2-VariableFont_wght.ttf);
   font-family: "Josefin_Sans2";
   src: url(/fonts/JosefinSans-VariableFont_wght.ttf);
+  font-display: swap;
 }
 
 .App {
