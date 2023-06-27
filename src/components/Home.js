@@ -98,14 +98,14 @@ function Home() {
           >
             <div className="brainlight-container d-flex">
               <img
-                className={`img-fluid brain brainlight ${
+                className={` brain brainlight ${
                   lightSwitch ? "brainlight-on" : null
                 }`}
                 src={lightOn}
                 alt="light on"
               />
               <button
-                className={`btn brain ${lightSwitch ? "int-off" : "int-on"}`}
+                className={` brain ${lightSwitch ? "int-off" : "int-on"}`}
                 onClick={handleSwitch}
               >
                 <img
