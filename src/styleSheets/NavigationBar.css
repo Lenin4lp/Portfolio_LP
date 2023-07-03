@@ -9,8 +9,8 @@
 }
 
 .logo {
-  width: 280px;
-  height: 68px;
+  width: 280px !important;
+  height: 68px !important;
 }
 
 .navbar-toggler {
