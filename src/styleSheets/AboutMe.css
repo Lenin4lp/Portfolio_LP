@@ -47,14 +47,8 @@
 .my-photo {
   width: 120px;
   height: 120px;
-  max-width: 120px;
-  max-height: 120px;
   border-radius: 100px;
   box-shadow: 0px 0px 2px #feffff, 0px 0px 6px #ffffff, 0px 0px 12px #ffffff;
-}
-
-.who-am-i {
-  backdrop-filter: null !important;
 }
 
 .description {
@@ -80,10 +74,6 @@
   padding: 15px 10px 15px 10px;
 }
 
-.tec-text {
-  font-size: 23px;
-}
-
 .tec-text-container {
   margin-top: 5px;
 }
@@ -101,8 +91,6 @@
     font-size: 17px;
   }
 }
-
-/* * Media Query */
 
 @media (max-width: 346px) {
   .nav-button {
